@@ -50,7 +50,7 @@ const quiz = [
         correct: '個性の強奪・付与'
     },
     {
-        question: 'Q6. この幻獣は？\n <img src='https://github.com/zenmakyo/quiz/blob/main/げんもの410.PNG'>',
+        question: 'Q6. この幻獣は？\n <img src="https://github.com/zenmakyo/quiz/blob/main/げんもの410.PNG?raw-trew">',
         choices: [
             '戊戌',
             'シャノワール',
