@@ -50,12 +50,7 @@ const quiz = [
         correct: '個性の強奪・付与'
     },
     {
-        question: [
-            {
-                text:'Q6. この幻獣は？',
-                document.write('<image id="carousel_main" src=https://github.com/zenmakyo/quiz/blob/main/げんもの410.PNG">');,
-            }
-            ]
+        question: 'Q6. あ',
         choices: [
             '戊戌',
             'シャノワール',
