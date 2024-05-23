@@ -53,7 +53,7 @@ const quiz = [
         question: [
             {
                 text:'Q6. この幻獣は？',
-                imagePath: 'https://github.com/zenmakyo/quiz/blob/main/げんもの410.PNG',
+                document.write('<image id="carousel_main" src=https://github.com/zenmakyo/quiz/blob/main/げんもの410.PNG">');,
             }
             ]
         choices: [
