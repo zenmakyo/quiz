@@ -16,7 +16,7 @@ body {
 
 .card {
   width: calc(100% - 20px); /* 横幅を画面幅の100%から左右10pxを引いた値に */
-  max-width: 600px;
+  max-width: 1000px;
   text-align: center;
   padding-top: 10px; /* タイトルの位置調整 */
   overflow: auto; /* 内容が溢れた時にスクロール可能に */
@@ -50,11 +50,11 @@ h2::after {
 h2::before {
   content: "";
   position: absolute;
-  left: -5px; /* 左側の位置調整 */
+  left: 0px; /* 左側の位置調整 */
   top: 50%;
   transform: translateY(-50%);
   width: 15px;
-  height: 140%; /* 茶色の縦棒の高さ */
+  height: 130%; /* 茶色の縦棒の高さ */
   background-color: #a67c52; /* 茶色の棒 */
   border-radius: 10px;
 }
