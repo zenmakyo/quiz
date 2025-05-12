@@ -40,33 +40,26 @@ h2::before {
   left: -5px; /* 左側の位置調整 */
   top: 50%;
   transform: translateY(-50%);
-  width: 20px;
+  width: 25px;
   height: 120%; /* 緑の縦棒の高さ */
   background-color: #255a25; /* 緑系の枠 */
   border-radius: 10px;
 }
 
-/* 上下に短い茶色の縦棒 */
+/* 巻物の上下の茶色の縦棒 */
 h2::after {
   content: "";
   position: absolute;
-  left: 0px; /* 左側の位置調整 */
-  top: -20px; /* 上の棒 */
-  width: 20px;
-  height: 10%; /* 短い茶色の縦棒の高さ */
-  background-color: #a67c52; /* 茶色 */
+  left: -5px;
+  width: 12px;
+  height: 10px;
+  background-color: #a67c52;
   border-radius: 10px;
-}
-
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0px; /* 左側の位置調整 */
-  bottom: -20px; /* 下の棒 */
-  width: 20px;
-  height: 10%; /* 短い茶色の縦棒の高さ */
-  background-color: #a67c52; /* 茶色 */
-  border-radius: 10px;
+  box-shadow:
+    0px -25px 0px #a67c52,  /* 上の棒 */
+    0px 25px 0px #a67c52;   /* 下の棒 */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* 選択肢の配置 */
