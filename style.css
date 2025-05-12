@@ -29,11 +29,10 @@ h2 {
   padding: 20px 40px;
   font-size: 24px;
   border: 4px solid #9bc19d; /* 緑系の枠 */
-  margin: 0 10px 30px 10px; /* 左右10px、下に30pxの余白 */
-  text-align: center; /* タイトル中央揃え */
+  margin-bottom: 30px;
 }
 
-/* 巻物の左側の筒 */
+/* 巻物の左側の緑の縦棒 */
 h2::before {
   content: "";
   position: absolute;
@@ -41,8 +40,31 @@ h2::before {
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
-  height: 60%;
-  background-color: #a67c52;
+  height: 60%; /* 緑の縦棒の高さ */
+  background-color: #4CAF50; /* 緑色 */
+  border-radius: 10px;
+}
+
+/* 上下に短い茶色の縦棒 */
+h2::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -20px; /* 上の棒 */
+  width: 20px;
+  height: 10%; /* 短い茶色の縦棒の高さ */
+  background-color: #a67c52; /* 茶色 */
+  border-radius: 10px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px; /* 下の棒 */
+  width: 20px;
+  height: 10%; /* 短い茶色の縦棒の高さ */
+  background-color: #a67c52; /* 茶色 */
   border-radius: 10px;
 }
 
