@@ -29,7 +29,7 @@ h2 {
   padding: 20px 40px;
   padding-left: 40px; /* タイトルと緑の縦棒の間に余白を追加 */
   font-size: 24px;
-  border: 5px solid #088908; /* 緑系の枠 */
+  border: 5px solid #255a25; /* 緑系の枠 */
   margin-bottom: 30px;
 }
 
@@ -37,12 +37,12 @@ h2 {
 h2::before {
   content: "";
   position: absolute;
-  left: 0px; /* 左側の位置調整 */
+  left: -5px; /* 左側の位置調整 */
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
-  height: 110%; /* 緑の縦棒の高さ */
-  background-color: #088908; /* 緑系の枠 */
+  height: 120%; /* 緑の縦棒の高さ */
+  background-color: #255a25; /* 緑系の枠 */
   border-radius: 10px;
 }
 
