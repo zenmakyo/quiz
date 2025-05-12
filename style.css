@@ -12,6 +12,7 @@ body {
   align-items: flex-start;  /* 上に配置 */
   height: auto; /* 自動調整 */
   overflow: hidden; /* スクロールを防止 */
+  margin-top: 10px; /* 10px下にずらす */
 }
 
 .card {
