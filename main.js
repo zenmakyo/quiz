@@ -138,7 +138,22 @@ const clickHandler = (e) => {
     if (quizIndex < quizLength) {
         setupQuiz();
     } else {
-        window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
+    let comment = '';
+    const rate = score / quizLength;
+
+    if (rate === 1) {
+        comment = '全問正解！幻獣マスターとは君のこと！';
+    } else if (rate >= 0.8) {
+        comment = '幻獣マスターまで後一歩！';
+    } else if (rate >= 0.5) {
+        comment = '基礎知識はある！日々鍛錬あるのみ！';
+    } else if (rate >= 0.3) {
+        comment = 'プレイ時間が足りない！';
+    } else {
+        comment = '.....やり直し';
+    }
+
+    window.alert('終了！あなたの正解数は ' + score + '/' + quizLength + ' です！\n' + comment);
         // 終了後に遷移
         location.href = 'https://zenmakyo.github.io/genmono2/'; // 指定URLに書き換えてください
     }
