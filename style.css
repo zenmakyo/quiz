@@ -11,13 +11,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* スクロールを防止 */
 }
 
 .card {
-  width: 90%;
+  width: calc(100% - 20px); /* 横幅を画面幅の100%から左右10pxを引いた値に */
   max-width: 600px;
   text-align: center;
   padding-top: 30px; /* タイトルの位置調整 */
+  overflow: auto; /* 内容が溢れた時にスクロール可能に */
 }
 
 h2 {
@@ -27,7 +29,7 @@ h2 {
   padding: 20px 40px;
   font-size: 24px;
   border: 4px solid #9bc19d; /* 緑系の枠 */
-  margin: 0 20px 30px 20px; /* 左右に20px、下に30pxの余白 */
+  margin: 0 10px 30px 10px; /* 左右10px、下に30pxの余白 */
   text-align: center; /* タイトル中央揃え */
 }
 
@@ -47,8 +49,7 @@ h2::before {
 /* 選択肢の配置 */
 .choices-container {
   display: grid;
-  grid-template-columns: 1fr; /* 1列に変更 */
-  grid-template-rows: repeat(4, 1fr); /* 4行に変更 */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 1行に4つの選択肢 */
   gap: 20px; /* 各選択肢の間隔 */
 }
 
@@ -66,4 +67,11 @@ h2::before {
 
 .choice button:hover {
   background-color: #f0f0f0;
+}
+
+/* レスポンシブ対応: スマホサイズでは選択肢を1列にする */
+@media (max-width: 600px) {
+  .choices-container {
+    grid-template-columns: 1fr; /* 1列に変更 */
+  }
 }
