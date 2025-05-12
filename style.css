@@ -21,6 +21,7 @@ body {
   text-align: center;
   padding-top: 20px; /* タイトルの位置調整 */
   overflow: auto; /* 内容が溢れた時にスクロール可能に */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* 影 */
 }
 
 h2 {
