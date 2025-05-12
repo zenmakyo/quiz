@@ -37,7 +37,7 @@ h2 {
 h2::before {
   content: "";
   position: absolute;
-  left: -5px; /* 左側の位置調整 */
+  left: -8px; /* 左側の位置調整 */
   top: 50%;
   transform: translateY(-50%);
   width: 25px;
