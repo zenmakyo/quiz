@@ -7,6 +7,10 @@
 
 body {
   background-color: #e6e6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .card {
@@ -16,17 +20,18 @@ body {
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   width: 100%;
-  margin: 100px auto;
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  height: auto;
+  border-radius: 15px;
 }
 
 .card h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px; /* タイトルと選択肢の間に余白を追加 */
-  text-align: center;
+  font-size: 24px; /* タイトルの文字サイズ */
+  margin-bottom: 20px; /* タイトルと選択肢の間に余白 */
   position: relative;
-  padding-left: 40px; /* 左側の巻物筒部分のためにスペースを確保 */
+  text-align: center;
+  padding-left: 50px; /* 左側に巻物筒部分のスペースを追加 */
 }
 
 .card h2::before {
@@ -34,22 +39,22 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 30px;  /* 巻物の筒部分の幅 */
-  height: 100%;  /* 高さをタイトルの高さに合わせる */
-  background-color: #2e8b57;  /* 緑色 */
-  border-radius: 5px 0 0 5px;  /* 左上と左下を丸くする */
+  width: 40px; /* 巻物の筒部分の幅 */
+  height: 100%; /* 高さをタイトルの高さに合わせる */
+  background-color: #2e8b57; /* 巻物の筒の緑色 */
+  border-radius: 5px 0 0 5px; /* 左上と左下を丸くして筒風に */
 }
 
 .choices-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2x2の選択肢配置 */
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr; /* 2列に配置 */
+  grid-gap: 20px; /* 選択肢間のスペース */
   width: 100%;
-  max-width: 600px;
+  margin-top: 20px;
 }
 
 .choice button {
-  border: 1px solid rgba(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -57,4 +62,10 @@ body {
   background-color: #fff;
   width: 100%;
   font-size: 20px;
+  border-radius: 10px; /* ボタンの角を丸く */
+  transition: background-color 0.3s;
+}
+
+.choice button:hover {
+  background-color: #f0f0f0; /* ホバー時に色を変更 */
 }
