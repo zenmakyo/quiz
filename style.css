@@ -81,10 +81,3 @@ h2::before {
 .choice button:hover {
   background-color: #f0f0f0;
 }
-
-/* レスポンシブ対応: スマホサイズでは選択肢を1列にする */
-@media (max-width: 600px) {
-  .choices-container {
-    grid-template-columns: 1fr; /* 1列に変更 */
-  }
-}
