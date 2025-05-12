@@ -34,7 +34,7 @@ h2 {
 }
 
 /* 巻物の左側の緑の縦棒 */
-h2::before {
+h2::after {
   content: "";
   position: absolute;
   left: -5px; /* 左側の位置調整 */
@@ -47,20 +47,16 @@ h2::before {
 }
 
 /* 緑棒の上下に茶色の縦棒 */
-h2::after {
+h2::before {
   content: "";
   position: absolute;
-  left: -2px; /* 緑棒の中央に重ねる */
-  width: 20px;
-  height: 10px; /* 中央に表示しない */
-  background-color: transparent;
-  box-shadow:
-    0px -65px 0px #a67c52,  /* 上の茶色棒 */
-    0px 65px 0px #a67c52;   /* 下の茶色棒 */
-  border-radius: 10px;
+  left: -5px; /* 左側の位置調整 */
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
+  width: 15px;
+  height: 140%; /* 茶色の縦棒の高さ */
+  background-color: #a67c52; /* 茶色の棒 */
+  border-radius: 10px;
 }
 
 /* 選択肢の配置 */
