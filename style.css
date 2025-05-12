@@ -5,11 +5,15 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: #e6e6fa;
+}
+
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e6e6fa;
+  background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
@@ -23,17 +27,20 @@
 
 .card .choice {
   margin-top: 100px;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
   width: 100%;
+  max-width: 600px;
 }
 
 .card .choice button {
   border: 1px solid rgba(0, 0, 0);
-  padding: 10px 20px;
+  padding: 20px;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   outline: none;
   background-color: #fff;
-  width: 150px;
+  width: 100%;
+  font-size: 20px;
 }
