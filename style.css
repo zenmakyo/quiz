@@ -9,8 +9,8 @@ body {
   background-color: #e6e6fa; /* 淡い水色背景色 */
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;  /* 上に配置 */
+  height: auto; /* 自動調整 */
   overflow: hidden; /* スクロールを防止 */
 }
 
@@ -62,7 +62,8 @@ h2::before {
 /* 選択肢の配置 */
 .choices-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* 1行に4つの選択肢 */
+  grid-template-columns: 1fr; /* 1列に変更 */
+  grid-template-rows: repeat(4, 1fr); /* 4行に分けて配置 */
   gap: 15px; /* 各選択肢の間隔 */
 }
 
