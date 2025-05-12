@@ -16,17 +16,18 @@ body {
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   width: 100%;
-  height: 100%;
   margin: 100px auto;
-  padding: 50px;
+  padding: 20px; /* 高さ調整のためにpaddingを減らした */
+  height: auto;  /* 高さを自動調整 */
 }
 
 .card h2 {
   font-size: 1.5em;
+  margin-bottom: 20px; /* タイトルと選択肢の間に余白を追加 */
 }
 
 .card .choice {
-  margin-top: 100px;
+  margin-top: 0;  /* 高さ調整後、余分なマージンを削除 */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
