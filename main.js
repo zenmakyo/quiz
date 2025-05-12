@@ -99,7 +99,7 @@ const quiz = [
         ],
         correct: '2021年11月'
     },
-]
+];
 
 const quizLength = quiz.length;
 let quizIndex = 0;
@@ -109,9 +109,12 @@ const button = document.getElementsByTagName('button');
 const buttonLength = button.length;
 
 const setupQuiz = () => {
+    // 問題タイトルを設定
     document.getElementById('question').textContent = quiz[quizIndex].question;
+
+    // 選択肢のボタンを設定
     let buttonIndex = 0;
-    while(buttonIndex < buttonLength) {
+    while (buttonIndex < buttonLength) {
         button[buttonIndex].textContent = quiz[quizIndex].choices[buttonIndex];
         buttonIndex++;
     }
@@ -136,8 +139,9 @@ const clickHandler = (e) => {
     }
 }
 
+// ボタンにクリックイベントを追加
 let handlerIndex = 0;
-while(handlerIndex < buttonLength) {
+while (handlerIndex < buttonLength) {
     button[handlerIndex].addEventListener('click', (e) => {
         clickHandler(e);
     });
