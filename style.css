@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #e6e6fa;
+  background-color: #f4f1e9; /* 淡い和風背景色 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,58 +14,53 @@ body {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-  width: 100%;
+  width: 90%;
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 15px;
-}
-
-.card h2 {
-  font-size: 24px; /* タイトルの文字サイズ */
-  margin-bottom: 20px; /* タイトルと選択肢の間に余白 */
-  position: relative;
   text-align: center;
-  padding-left: 50px; /* 左側に巻物筒部分のスペースを追加 */
 }
 
-.card h2::before {
+h2 {
+  position: relative;
+  background-color: #fffaf0; /* 巻物風の背景 */
+  color: #000;
+  padding: 20px 40px;
+  font-size: 24px;
+  border: 4px solid #9bc19d; /* 緑系の枠 */
+  margin-bottom: 30px;
+}
+
+/* 巻物の左側の筒 */
+h2::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px; /* 巻物の筒部分の幅 */
-  height: 100%; /* 高さをタイトルの高さに合わせる */
-  background-color: #2e8b57; /* 巻物の筒の緑色 */
-  border-radius: 5px 0 0 5px; /* 左上と左下を丸くして筒風に */
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 60%;
+  background-color: #a67c52;
+  border-radius: 10px;
 }
 
+/* 選択肢の配置 */
 .choices-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 2列に配置 */
-  grid-gap: 20px; /* 選択肢間のスペース */
-  width: 100%;
-  margin-top: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .choice button {
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  outline: none;
-  background-color: #fff;
   width: 100%;
+  padding: 20px;
   font-size: 20px;
-  border-radius: 10px; /* ボタンの角を丸く */
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
   transition: background-color 0.3s;
 }
 
 .choice button:hover {
-  background-color: #f0f0f0; /* ホバー時に色を変更 */
+  background-color: #f0f0f0;
 }
