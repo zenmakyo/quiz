@@ -123,11 +123,14 @@ const setupQuiz = () => {
 setupQuiz();
 
 const clickHandler = (e) => {
-    if (quiz[quizIndex].correct === e.target.textContent) {
+    const selected = e.target.textContent;
+    const correctAnswer = quiz[quizIndex].correct;
+
+    if (selected === correctAnswer) {
         window.alert("正解！");
         score++;
     } else {
-        window.alert("不正解！");
+        window.alert("不正解！\n正解は「" + correctAnswer + "」です。");
     }
 
     quizIndex++;
@@ -136,6 +139,8 @@ const clickHandler = (e) => {
         setupQuiz();
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
+        // 終了後に遷移
+        location.href = 'https://zenmakyo.github.io/genmono2/'; // 指定URLに書き換えてください
     }
 }
 
