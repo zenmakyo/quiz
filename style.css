@@ -84,3 +84,9 @@ h2::before {
 .choice button:hover {
   background-color: #f0f0f0;
 }
+
+.choice button:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #fffaf0; /* 通常の背景に戻す */
+}
