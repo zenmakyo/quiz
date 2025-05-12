@@ -17,22 +17,26 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   width: 100%;
   margin: 100px auto;
-  padding: 20px; /* 高さ調整のためにpaddingを減らした */
+  padding: 20px;
   height: auto;  /* 高さを自動調整 */
 }
 
 .card h2 {
   font-size: 1.5em;
   margin-bottom: 20px; /* タイトルと選択肢の間に余白を追加 */
+  background-color: #f0f0f0;  /* 背景色を追加（巻物風） */
+  padding: 10px;
+  border: 5px solid #2c7a4f;  /* 緑色の枠 */
+  border-radius: 10px;  /* 角を丸めて柔らかい印象 */
 }
 
-.card .choice {
-  margin-top: 0;  /* 高さ調整後、余分なマージンを削除 */
+.choices-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 100%;
   max-width: 600px;
+  margin-top: 20px; /* タイトルと選択肢の間に余白 */
 }
 
 .card .choice button {
