@@ -18,7 +18,7 @@ body {
   width: calc(100% - 20px); /* 横幅を画面幅の100%から左右10pxを引いた値に */
   max-width: 1000px;
   text-align: center;
-  padding-top: 10px; /* タイトルの位置調整 */
+  margin-top: 20px; /* タイトルの位置調整 */
   overflow: auto; /* 内容が溢れた時にスクロール可能に */
 }
 
