@@ -63,7 +63,7 @@ h2::before {
 .choices-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr; /* 1行に4つの選択肢 */
-  gap: 20px; /* 各選択肢の間隔 */
+  gap: 15px; /* 各選択肢の間隔 */
 }
 
 .choice button {
