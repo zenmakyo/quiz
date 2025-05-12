@@ -17,6 +17,7 @@ body {
   width: 90%;
   max-width: 600px;
   text-align: center;
+  padding-top: 30px; /* タイトルの位置調整 */
 }
 
 h2 {
@@ -26,7 +27,8 @@ h2 {
   padding: 20px 40px;
   font-size: 24px;
   border: 4px solid #9bc19d; /* 緑系の枠 */
-  margin-bottom: 30px;
+  margin: 0 20px 30px 20px; /* 左右に20px、下に30pxの余白 */
+  text-align: center; /* タイトル中央揃え */
 }
 
 /* 巻物の左側の筒 */
@@ -45,8 +47,9 @@ h2::before {
 /* 選択肢の配置 */
 .choices-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr; /* 1列に変更 */
+  grid-template-rows: repeat(4, 1fr); /* 4行に変更 */
+  gap: 20px; /* 各選択肢の間隔 */
 }
 
 .choice button {
